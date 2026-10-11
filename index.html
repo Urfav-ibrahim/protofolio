@@ -1,0 +1,437 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>بورتفوليو إبراهيم حمدي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Reem+Kufi:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: a ledger-style portfolio. Hero pairs the pitch with a campaign statement; every proof is shown as the original screenshot. */
+:root {
+  --bg: #EDF1EE;
+  --surface: #FAFCFA;
+  --ink: #0F1F1A;
+  --muted: #4A5F57;
+  --line: #CAD6D0;
+  --line-strong: #8FA399;
+  --accent: #0B6B52;
+  --accent-ink: #FFFFFF;
+  --mark: #F1C232;
+  --mark-ink: #1D1700;
+  --overlay: rgba(6, 14, 11, .9);
+  --f-display: "Reem Kufi", "IBM Plex Sans Arabic", system-ui, sans-serif;
+  --f-body: "IBM Plex Sans Arabic", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-num: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0B1512; --surface: #12211C; --ink: #E8F1ED; --muted: #9FB4AB;
+    --line: #26392F; --line-strong: #4C6559; --accent: #3DD6A3; --accent-ink: #06241A;
+    --mark: #E6B422; --mark-ink: #1D1700; --overlay: rgba(2, 6, 4, .92);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0B1512; --surface: #12211C; --ink: #E8F1ED; --muted: #9FB4AB;
+  --line: #26392F; --line-strong: #4C6559; --accent: #3DD6A3; --accent-ink: #06241A;
+  --mark: #E6B422; --mark-ink: #1D1700; --overlay: rgba(2, 6, 4, .92);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.8 var(--f-body); }
+a { color: inherit; }
+img { display: block; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+.page { max-width: 1080px; margin-inline: auto; padding-inline: 16px; padding-block: 0 40px; }
+.num { font-family: var(--f-num); font-variant-numeric: tabular-nums; direction: ltr; unicode-bidi: isolate; }
+h1, h2, h3 { font-family: var(--f-display); font-weight: 700; line-height: 1.35; text-wrap: balance; margin: 0; }
+p { margin: 0; }
+
+/* top bar */
+.bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 18px; border-bottom: 1px solid var(--line); }
+.brand { font-family: var(--f-display); font-weight: 700; font-size: 1.15rem; text-decoration: none; }
+.nav { display: flex; align-items: center; gap: 22px; font-size: .95rem; }
+.nav a { text-decoration: none; color: var(--muted); }
+.nav a:hover { color: var(--ink); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 8px 20px; border-radius: 8px; font: 600 1rem/1.2 var(--f-body); text-decoration: none; cursor: pointer; border: 1.5px solid transparent; }
+.btn-main { background: var(--accent); color: var(--accent-ink); }
+.btn-main:hover { filter: brightness(1.08); }
+.btn-line { border-color: var(--line-strong); color: var(--ink); background: transparent; }
+.btn-line:hover { border-color: var(--ink); }
+.nav .btn { min-height: 40px; padding: 6px 16px; color: var(--accent-ink); }
+.nav .btn:hover { color: var(--accent-ink); }
+
+/* hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 40px; align-items: start; padding-block: 56px 64px; }
+.who { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+.me { width: 84px; height: 84px; border-radius: 50%; overflow: hidden; flex: none; border: 2px solid var(--line-strong); background: var(--surface); }
+.me img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.06); }
+.who b { display: block; font-family: var(--f-display); font-size: 1.2rem; font-weight: 700; line-height: 1.3; }
+.who span { color: var(--muted); font-size: .92rem; }
+.hero h1 { font-size: clamp(2rem, 5.4vw, 3.3rem); letter-spacing: -.005em; }
+.hero h1 em { font-style: normal; background: linear-gradient(transparent 62%, var(--mark) 62%, var(--mark) 92%, transparent 92%); color: inherit; padding-inline: 4px; }
+.lead { margin-top: 22px; max-width: 34em; color: var(--muted); font-size: 1.06rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+
+.stmt { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 22px 22px 18px; min-width: 0; }
+.stmt-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.stmt-head h2 { font-size: 1.05rem; }
+.tag { font-family: var(--f-num); font-size: .72rem; letter-spacing: .12em; color: var(--muted); direction: ltr; }
+.stmt-period { color: var(--muted); font-size: .88rem; margin-top: 2px; }
+.big { margin-top: 20px; padding-block: 16px; border-block: 1.5px dashed var(--line-strong); }
+.big small { display: block; color: var(--muted); font-size: .9rem; }
+.big .num { display: inline-block; font-size: clamp(2.6rem, 8vw, 3.6rem); font-weight: 500; line-height: 1.15; background: var(--mark); color: var(--mark-ink); padding: 0 12px; border-radius: 4px; margin-top: 6px; }
+.big .cur { font-size: 1rem; margin-inline-start: 8px; color: var(--muted); }
+.rows { margin: 14px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.row { display: flex; align-items: baseline; gap: 8px; }
+.row .dots { flex: 1; min-width: 12px; border-bottom: 1.5px dotted var(--line-strong); transform: translateY(-.3em); }
+.row .num { font-size: .98rem; font-weight: 500; }
+.stmt-note { margin-top: 14px; font-size: .82rem; color: var(--muted); line-height: 1.65; }
+
+/* sections */
+section { padding-block: 56px 8px; border-top: 1px solid var(--line); scroll-margin-top: 8px; }
+.sec-head { display: grid; gap: 10px; margin-bottom: 30px; max-width: 40em; }
+.sec-head h2 { font-size: clamp(1.55rem, 4vw, 2.2rem); }
+.sec-head p { color: var(--muted); }
+
+/* principles */
+.pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px 36px; margin: 0; padding: 0; list-style: none; }
+.pillars li { min-width: 0; padding-top: 14px; border-top: 3px solid var(--accent); }
+.pillars h3 { font-size: 1.15rem; margin-bottom: 6px; }
+.pillars p { color: var(--muted); font-size: .97rem; }
+
+/* proof screenshots */
+.proofs { display: grid; gap: 34px; }
+.proof { margin: 0; min-width: 0; }
+.zoom { display: block; width: 100%; padding: 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: #fff; cursor: zoom-in; }
+.zoom img { width: 100%; height: auto; }
+.proof figcaption { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 24px; margin-top: 10px; font-size: .95rem; }
+.proof figcaption .num { font-weight: 500; }
+.proof figcaption span:last-child { color: var(--muted); }
+.hint { margin-top: 22px; font-size: .88rem; color: var(--muted); }
+
+/* clients */
+.clients { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0; margin: 0; padding: 0; list-style: none; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); overflow: hidden; }
+.clients li { padding: 22px 22px; border-inline-end: 1px solid var(--line); border-block-end: 1px solid var(--line); margin-inline-end: -1px; margin-block-end: -1px; min-width: 0; }
+.clients b { display: block; font-family: var(--f-display); font-size: 1.2rem; font-weight: 700; line-height: 1.4; }
+.clients span { color: var(--muted); font-size: .9rem; }
+
+/* testimonial */
+.say { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 36px; align-items: center; }
+.say blockquote { margin: 0; font-family: var(--f-display); font-weight: 500; font-size: clamp(1.3rem, 3.2vw, 1.8rem); line-height: 1.7; text-wrap: pretty; }
+.say .by { margin-top: 14px; color: var(--muted); font-size: .95rem; }
+.zoom.dark { background: #0e1512; }
+
+/* skills */
+.skills { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 20px; }
+.main-skill { background: var(--accent); color: var(--accent-ink); border-radius: 8px; padding: 28px; display: flex; flex-direction: column; gap: 10px; }
+.main-skill small { font-size: .85rem; opacity: .85; }
+.main-skill h3 { font-size: 1.7rem; }
+.main-skill p { font-size: 1rem; opacity: .92; max-width: 28em; }
+.side-skills { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); align-content: start; }
+.side-skills li { padding: 18px 22px; border-bottom: 1px solid var(--line); min-width: 0; }
+.side-skills li:last-child { border-bottom: 0; }
+.side-skills b { display: block; font-size: 1.05rem; font-weight: 600; }
+.side-skills span { color: var(--muted); font-size: .92rem; }
+
+/* certificates */
+.certs { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 22px; margin: 0; padding: 0; list-style: none; }
+.cert { direction: ltr; text-align: left; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
+.cert .zoom { background: #fff; }
+.cert h3 { font-family: var(--f-body); font-weight: 600; font-size: .98rem; line-height: 1.45; }
+.cert .meta { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: .85rem; color: var(--muted); }
+.cert .meta a { color: var(--accent); font-weight: 500; }
+
+/* contact */
+.contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 36px; align-items: start; }
+.contact h2 { font-size: clamp(1.8rem, 4.6vw, 2.8rem); }
+.contact .lead { margin-top: 14px; }
+.how { display: grid; gap: 0; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); overflow: hidden; }
+.how > div { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 16px 20px; border-bottom: 1px solid var(--line); min-width: 0; }
+.how > div:last-child { border-bottom: 0; }
+.how label { color: var(--muted); font-size: .9rem; }
+.how .val { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; min-width: 0; }
+.how .num { font-size: 1.02rem; font-weight: 500; overflow-wrap: anywhere; }
+.copy { font: 500 .85rem/1 var(--f-body); padding: 8px 12px; border-radius: 6px; border: 1px solid var(--line-strong); background: transparent; color: var(--ink); cursor: pointer; }
+.copy:hover { border-color: var(--ink); }
+.contact .hero-cta { margin-top: 22px; }
+
+footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: .88rem; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+/* lightbox */
+.lb { position: fixed; inset: 0; z-index: 50; background: var(--overlay); display: flex; flex-direction: column; padding: calc(12px + env(safe-area-inset-top, 0px)) 12px calc(12px + env(safe-area-inset-bottom, 0px)); gap: 10px; }
+.lb-x { align-self: flex-start; font: 600 .95rem/1 var(--f-body); padding: 11px 18px; border-radius: 8px; border: 0; background: var(--surface); color: var(--ink); cursor: pointer; }
+.lb-scroll { flex: 1; min-height: 0; overflow: auto; border-radius: 8px; }
+.lb-scroll img { width: max(100%, 980px); max-width: none; height: auto; margin-inline: auto; background: #fff; }
+
+@media (max-width: 860px) {
+  .hero, .say, .skills, .contact { grid-template-columns: minmax(0, 1fr); }
+  .hero { gap: 32px; padding-block: 36px 48px; }
+  .say { gap: 22px; }
+}
+@media (max-width: 640px) {
+  .nav a:not(.btn) { display: none; }
+  section { padding-block: 44px 4px; }
+  .stmt { padding: 18px 16px 16px; }
+  .main-skill { padding: 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+</style>
+
+<div class="page" dir="rtl" lang="ar">
+  <header class="bar">
+    <a class="brand" href="#top">إبراهيم حمدي</a>
+    <nav class="nav" aria-label="أقسام الصفحة">
+      <a href="#results">النتايج</a>
+      <a href="#clients">العملاء</a>
+      <a href="#skills">المهارات</a>
+      <a href="#certs">الشهادات</a>
+      <a class="btn btn-main" href="https://wa.me/201229274484" target="_blank" rel="noopener">واتساب</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <div class="who">
+          <div class="me"><img src="img/me.jpg" alt="صورة إبراهيم حمدي" width="84" height="84"></div>
+          <div>
+            <b>إبراهيم حمدي</b>
+            <span>ميديا باير · إعلانات ميتا</span>
+          </div>
+        </div>
+        <h1>فلوسك على الإعلانات تستاهل تشوفها <em>بوضوح كامل</em></h1>
+        <p class="lead">بشغّل إعلانات ميتا لأصحاب البيزنس اللي عايزين نتايج ناجحة من غير خوف من النصب أو الفشل. كل حملة بتتعرض بأرقامها زي ما هي في Ads Manager، لأن الوضوح لازم يجي قبل ما تصرف.</p>
+        <p class="lead" style="margin-top:10px">طالب طب أسنان في سنة رابعة بجامعة الأزهر، وميديا باير متخصص في ميتا.</p>
+        <div class="hero-cta">
+          <a class="btn btn-main" href="https://wa.me/201229274484" target="_blank" rel="noopener">كلّمني على واتساب</a>
+          <a class="btn btn-line" href="#results">شوف النتايج</a>
+        </div>
+      </div>
+
+      <aside class="stmt" aria-label="ملخص نتايج الحملات">
+        <div class="stmt-head">
+          <h2>كشف نتايج الحملات</h2>
+          <span class="tag">META ADS</span>
+        </div>
+        <p class="stmt-period">من 6 يوليو إلى 4 أكتوبر 2026 · هدف الحملات: مبيعات رسايل</p>
+        <div class="big">
+          <small>متوسط تكلفة المحادثة</small>
+          <span class="num">3.21</span><span class="cur">ج.م</span>
+        </div>
+        <ul class="rows">
+          <li class="row"><span>عدد الحملات</span><span class="dots"></span><span class="num">15</span></li>
+          <li class="row"><span>محادثات تم بدؤها</span><span class="dots"></span><span class="num">1,998</span></li>
+          <li class="row"><span>المبلغ المنفق</span><span class="dots"></span><span class="num">6,411.67 EGP</span></li>
+          <li class="row"><span>أقل تكلفة محادثة</span><span class="dots"></span><span class="num">1.70 EGP</span></li>
+          <li class="row"><span>أعلى تكلفة محادثة</span><span class="dots"></span><span class="num">5.74 EGP</span></li>
+        </ul>
+        <p class="stmt-note">الأرقام مجمّعة من الصفوف الظاهرة في اللقطات الأصلية تحت، وأعلى وأقل تكلفة موضحين كما هم.</p>
+      </aside>
+    </div>
+
+    <section aria-labelledby="h-clear">
+      <div class="sec-head">
+        <h2 id="h-clear">الوضوح أولاً</h2>
+        <p>لما بتصرف على إعلان، من حقك تعرف الفلوس راحت فين وجابت إيه. ده اللي بشتغل عليه.</p>
+      </div>
+      <ul class="pillars">
+        <li>
+          <h3>أرقامك من المصدر</h3>
+          <p>النتايج تحت لقطات أصلية من Ads Manager، بالمبلغ المنفق وعدد النتايج وتكلفة كل نتيجة.</p>
+        </li>
+        <li>
+          <h3>الصرف جنب النتيجة</h3>
+          <p>كل حملة مكتوب قدامها كام اتصرف وكام محادثة جابت، فتقدر تحكم بنفسك من غير أرقام مجمّلة.</p>
+        </li>
+        <li>
+          <h3>رأي العميل مكتوب</h3>
+          <p>بطلب من عملائي فيدباك مكتوب عن التعامل، وبنشره زي ما وصلني.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="results" aria-labelledby="h-results">
+      <div class="sec-head">
+        <h2 id="h-results">نتايج حملات حقيقية</h2>
+        <p>أربع لقطات من Ads Manager، مرتبة من أقل تكلفة محادثة لأعلى. أسماء الحملات محجوبة لخصوصية العملاء.</p>
+      </div>
+      <div class="proofs">
+        <figure class="proof">
+          <button class="zoom" type="button" data-full="img/r1.jpg" aria-label="تكبير لقطة الحملات الأقل تكلفة"><img src="img/r1.jpg" width="1240" height="219" alt="جدول حملات من Ads Manager: تكلفة المحادثة من 1.70 إلى 2.84 جنيه، وأكبر حملة 414 محادثة بمبلغ 1,086.70 جنيه"></button>
+          <figcaption><span class="num">1.70 – 2.84 EGP / محادثة</span><span>أكبر حملة هنا: 414 محادثة بـ 1,086.70 ج.م</span></figcaption>
+        </figure>
+        <figure class="proof">
+          <button class="zoom" type="button" data-full="img/r2.jpg" aria-label="تكبير لقطة الحملات الثانية"><img src="img/r2.jpg" width="1262" height="323" alt="جدول حملات من Ads Manager: تكلفة المحادثة من 2.90 إلى 3.65 جنيه، وأكبر حملة 376 محادثة بمبلغ 1,371.87 جنيه" loading="lazy"></button>
+          <figcaption><span class="num">2.90 – 3.65 EGP / محادثة</span><span>أكبر حملة هنا: 376 محادثة بـ 1,371.87 ج.م</span></figcaption>
+        </figure>
+        <figure class="proof">
+          <button class="zoom" type="button" data-full="img/r3.jpg" aria-label="تكبير لقطة الحملات الثالثة"><img src="img/r3.jpg" width="1247" height="292" alt="جدول حملات من Ads Manager: تكلفة المحادثة من 3.94 إلى 4.72 جنيه، وأكبر حملة 95 محادثة بمبلغ 374.24 جنيه" loading="lazy"></button>
+          <figcaption><span class="num">3.94 – 4.72 EGP / محادثة</span><span>أكبر حملة هنا: 95 محادثة بـ 374.24 ج.م</span></figcaption>
+        </figure>
+        <figure class="proof">
+          <button class="zoom" type="button" data-full="img/r4.jpg" aria-label="تكبير لقطة الحملات الرابعة"><img src="img/r4.jpg" width="1252" height="303" alt="جدول حملات من Ads Manager: تكلفة المحادثة من 4.72 إلى 5.74 جنيه، وأكبر حملة 75 محادثة بمبلغ 414.14 جنيه" loading="lazy"></button>
+          <figcaption><span class="num">4.72 – 5.74 EGP / محادثة</span><span>أكبر حملة هنا: 75 محادثة بـ 414.14 ج.م</span></figcaption>
+        </figure>
+      </div>
+      <p class="hint">اضغط على أي صورة لتكبيرها.</p>
+    </section>
+
+    <section id="clients" aria-labelledby="h-clients">
+      <div class="sec-head">
+        <h2 id="h-clients">اشتغلت مع</h2>
+        <p>أنشطة مختلفة، والهدف واحد: عميل محتمل يبعت رسالة.</p>
+      </div>
+      <ul class="clients">
+        <li><b>أتيليه</b></li>
+        <li><b>مول أدوات منزلية</b></li>
+        <li><b>مطعم أسماك</b></li>
+        <li><b>مطعم مشويات</b></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="h-say">
+      <div class="sec-head">
+        <h2 id="h-say">رأي عميل</h2>
+      </div>
+      <div class="say">
+        <div>
+          <blockquote>«الله يباركلك، تسلم على النتايج الجميلة دي وكفاية ذوقك في التعامل وصبرك، وإن شاء الله مستنيين اللي جاي أحسن.»</blockquote>
+          <p class="by">رسالة واتساب من عميل بعد الشغل، منشورة زي ما وصلت.</p>
+        </div>
+        <button class="zoom dark" type="button" data-full="img/t1.jpg" aria-label="تكبير رسالة العميل"><img src="img/t1.jpg" width="1080" height="670" alt="لقطة شاشة لمحادثة واتساب يشكر فيها العميل على النتايج وعلى حسن التعامل والصبر" loading="lazy"></button>
+      </div>
+    </section>
+
+    <section id="skills" aria-labelledby="h-skills">
+      <div class="sec-head">
+        <h2 id="h-skills">المهارات</h2>
+      </div>
+      <div class="skills">
+        <div class="main-skill">
+          <small>التخصص الأساسي</small>
+          <h3>إعلانات ميتا (Meta Ads)</h3>
+          <p>إدارة حملات مبيعات رسايل على منصات ميتا لأصحاب البيزنس، مع عرض الأرقام بشكل واضح.</p>
+        </div>
+        <ul class="side-skills">
+          <li><b>Social Media Management</b><span>إدارة صفحات السوشيال ميديا</span></li>
+          <li><b>Content Creation</b><span>مونتاج فيديوهات على Adobe Premiere Pro</span></li>
+          <li><b>تصميم على Canva</b><span>بشكل جانبي</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="certs" aria-labelledby="h-certs">
+      <div class="sec-head">
+        <h2 id="h-certs">شهادات جوجل</h2>
+        <p>خمس شهادات من Google Career Certificates عبر Coursera، وكل واحدة ليها رابط تحقق رسمي.</p>
+      </div>
+      <ul class="certs">
+        <li class="cert">
+          <button class="zoom" type="button" data-full="img/c1.jpg" aria-label="تكبير شهادة Foundations of Digital Marketing and E-commerce"><img src="img/c1.jpg" width="1155" height="892" alt="شهادة Foundations of Digital Marketing and E-commerce" loading="lazy"></button>
+          <h3>Foundations of Digital Marketing and E-commerce</h3>
+          <div class="meta"><span class="num">17 Dec 2025</span><a href="https://coursera.org/verify/S1RVWUKXF5AZ" target="_blank" rel="noopener">Verify on Coursera</a></div>
+        </li>
+        <li class="cert">
+          <button class="zoom" type="button" data-full="img/c2.jpg" aria-label="تكبير شهادة Attract and Engage Customers with Digital Marketing"><img src="img/c2.jpg" width="1155" height="892" alt="شهادة Attract and Engage Customers with Digital Marketing" loading="lazy"></button>
+          <h3>Attract and Engage Customers with Digital Marketing</h3>
+          <div class="meta"><span class="num">14 Jan 2026</span><a href="https://coursera.org/verify/XH1EAMQMZ5WG" target="_blank" rel="noopener">Verify on Coursera</a></div>
+        </li>
+        <li class="cert">
+          <button class="zoom" type="button" data-full="img/c3.jpg" aria-label="تكبير شهادة From Likes to Leads"><img src="img/c3.jpg" width="1155" height="892" alt="شهادة From Likes to Leads: Interact with Customers Online" loading="lazy"></button>
+          <h3>From Likes to Leads: Interact with Customers Online</h3>
+          <div class="meta"><span class="num">30 Jan 2026</span><a href="https://coursera.org/verify/ISOPX0F3WNEG" target="_blank" rel="noopener">Verify on Coursera</a></div>
+        </li>
+        <li class="cert">
+          <button class="zoom" type="button" data-full="img/c4.jpg" aria-label="تكبير شهادة Think Outside the Inbox"><img src="img/c4.jpg" width="1155" height="892" alt="شهادة Think Outside the Inbox: Email Marketing" loading="lazy"></button>
+          <h3>Think Outside the Inbox: Email Marketing</h3>
+          <div class="meta"><span class="num">12 Feb 2026</span><a href="https://coursera.org/verify/JQY9TJPBPTU8" target="_blank" rel="noopener">Verify on Coursera</a></div>
+        </li>
+        <li class="cert">
+          <button class="zoom" type="button" data-full="img/c6.jpg" aria-label="تكبير شهادة Make the Sale"><img src="img/c6.jpg" width="1155" height="892" alt="شهادة Make the Sale: Build, Launch, and Manage E-commerce Stores" loading="lazy"></button>
+          <h3>Make the Sale: Build, Launch, and Manage E-commerce Stores</h3>
+          <div class="meta"><span class="num">27 Feb 2026</span><a href="https://coursera.org/verify/S001KHO9I765" target="_blank" rel="noopener">Verify on Coursera</a></div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact" aria-labelledby="h-contact">
+      <div class="contact">
+        <div>
+          <h2 id="h-contact">عايز إعلاناتك تشتغل بوضوح؟</h2>
+          <p class="lead">ابعتلي على واتساب وقولي نشاطك إيه، ونشوف الحملة المناسبة ليك.</p>
+          <div class="hero-cta">
+            <a class="btn btn-main" href="https://wa.me/201229274484" target="_blank" rel="noopener">كلّمني على واتساب</a>
+          </div>
+        </div>
+        <div class="how">
+          <div>
+            <label for="ph">رقم الموبايل</label>
+            <div class="val"><span class="num" id="ph">01229274484</span><button class="copy" type="button" data-copy="01229274484" data-target="ph">نسخ</button></div>
+          </div>
+          <div>
+            <label for="em">الإيميل</label>
+            <div class="val"><span class="num" id="em">ebrahimhamdy45612@gmail.com</span><button class="copy" type="button" data-copy="ebrahimhamdy45612@gmail.com" data-target="em">نسخ</button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>إبراهيم حمدي · ميديا باير ميتا</span>
+  </footer>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="عرض الصورة" hidden dir="rtl" lang="ar">
+  <button class="lb-x" id="lbx" type="button">إغلاق</button>
+  <div class="lb-scroll"><img id="lbimg" alt=""></div>
+</div>
+
+<script>
+(function () {
+  var lb = document.getElementById('lb'), lbimg = document.getElementById('lbimg'), lbx = document.getElementById('lbx');
+  var last = null;
+  function openLb(btn) {
+    last = btn;
+    var im = btn.querySelector('img');
+    lbimg.src = btn.getAttribute('data-full');
+    lbimg.alt = im ? im.alt : '';
+    lb.hidden = false;
+    lbx.focus();
+  }
+  function closeLb() {
+    lb.hidden = true;
+    lbimg.removeAttribute('src');
+    if (last) last.focus();
+  }
+  document.querySelectorAll('.zoom').forEach(function (b) {
+    b.addEventListener('click', function () { openLb(b); });
+  });
+  lbx.addEventListener('click', closeLb);
+  lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !lb.hidden) closeLb(); });
+
+  document.querySelectorAll('.copy').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var text = b.getAttribute('data-copy'), target = document.getElementById(b.getAttribute('data-target'));
+      function ok() { var t = b.textContent; b.textContent = 'تم النسخ'; setTimeout(function () { b.textContent = t; }, 1600); }
+      function fallback() {
+        try {
+          var r = document.createRange(); r.selectNodeContents(target);
+          var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        } catch (err) {}
+      }
+      try {
+        navigator.clipboard.writeText(text).then(ok, fallback);
+      } catch (err) { fallback(); }
+    });
+  });
+})();
+</script>
+
+</body></html>
